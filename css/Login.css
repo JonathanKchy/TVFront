@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+}
+html{
+    margin: 0;
+}
+body{
+
+    background-image: url('/imagenes/mujer.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+}
+
+header{
+    display: block;
+    background: #28cacb ;   
+    width: auto;
+    color: #fff;
+    width: 100vh;
+}
