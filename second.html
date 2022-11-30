@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/second.css">
-    
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Kolker+Brush&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300;1,100;1,400&family=Outfit:wght@200;400&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -37,32 +34,45 @@
         <h2>Bienvenido</h2>
         <h3>¡Obtener tu firma electrónica nunca ha sido tan fácil!</h3></h2>
         <section class="secForm">
-            <form action="" class="formulario">
-                <section id="el-formulario">
-                    <div class="container-formulario">
+             <section id="el-formulario">
                         <form action="@Url.Action("Registrar","Acceso")" class="formulario" method="post" id="form1" enctype="multipart/form-data" onsubmit="return validar();">
             
-                            <!--
-                <img src="../../imagenes/sodigwhite.png" class="imagen-formulario">-->
-            
-                            <div class="form__group">
-                                <input type="number" name="identificacion" id="identificacion" value="" class="form__input" placeholder=" ">
-                                <label for="identificacion" class="form__label">Cedula de Identidad: </label>
-                                <span class="form__line"></span>
-                            </div>
-            
-                            <div class="bloque">
+                            <div class="prueba1">
                                 
-                                <input type="submit" name="button" value="Generar Contrato" class="form__submit">
                             </div>
-            
-            
-            
+                            
+                            <div class="grupo_input">
+                                <div class="div1">
+                                    <input oninput="validateInput()" type="text" minlength="10" id="identificacion"  maxlength="10"  name="identificacion" autocomplete="off" class="input_item"  placeholder=" " />
+                                    
+                                    <label for="identificacion" class="label_item">Identificación (mínimo 10 dígitos) </label>
+
+                                </div>
+                                <div id="pruebe" class="div2">
+                                    &#9745
+                                </div>
+
+                                <div class="text-danger" style="text-align:left">
+                                    <label hidden id="mensajeIdentificacion"> * Ingrese el número de identificación</label>
+                                    <label hidden id="mensajeIdentificacionCaracteres"> * La identificación debe tener 10 caracteres</label>
+                                </div>
+                            </div>
+
+
+
+                            <div class="bloque">
+                                <input type="submit" name="button" value="Iniciar Sesión" class="form__submit">
+                            </div>
             
                         </form>
-                    </div>
+                        <div class="col-md-4 offset-sm-1 pt-8 mb-7">
+                            <a href="~/Content/video/politica.pdf" download="politicas" target="_blank" style="color: blue; font-size: 16px; margin: 10px 0 0 10px;">Políticas de Seguridad</a><br />
+                            <p>
+                                &#9888 Personas extranjeras o jurídicas deben realizar el proceso de forma presencial
+                            </p>
+                        </div>
                 </section>
-            </form>
+           
         </section>
     </section>
     <!--Formulario-->
