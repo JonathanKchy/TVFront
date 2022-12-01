@@ -35,9 +35,9 @@
         <h3>¡Obtener tu firma electrónica nunca ha sido tan fácil!</h3></h2>
         <section class="secForm">
              <section id="el-formulario">
-                        <form action="@Url.Action("Registrar","Acceso")" class="formulario" method="post" id="form1" enctype="multipart/form-data" onsubmit="return validar();">
+                        <form action="@Url.Action("Registrar","Acceso")" class="formario" method="post" id="form1" enctype="multipart/form-data" onsubmit="return validar();">
             
-                                                        
+                            <!--cédula-->                        
                             <div class="grupo_input">
                                 <div class="div1">
                                     <input oninput="validateInput()" type="text" minlength="10" id="identificacion"  maxlength="10"  name="identificacion" autocomplete="off" class="input_item"  placeholder=" " />
@@ -45,8 +45,7 @@
                                     <label for="identificacion" class="label_item">Identificación (mínimo 10 dígitos)
                                         <span class="label_visto">&#9745</span> </label>
                                 </div>
-
-                               
+                                
                                 <div id="pruebe" class="div2">
                                    
                                 </div>
@@ -57,8 +56,46 @@
                                 </div>
                             </div>
 
+                             <!--correo-->
+                            <div class="grupo_input">
+                                <div class="div1">
+                                    <input type="email" id="email" name="correo" autocomplete="off" class="input_item" placeholder=" " />
 
+                                    <label for="email" class="label_item">
+                                        Ingrese su correo electrónico personal
+                                        <span class="label_visto">&#9745</span>
+                                    </label>
+                                </div>
 
+                                <div id="pruebe" class="div2">
+
+                                </div>
+
+                            </div>
+
+                                <span class="message success">Correo electrónico válido!</span>
+                                <span class="message error">Correo electrónico inválido!</span>
+                                <div class="text-danger" style="text-align:left">
+                                    <label hidden id="mensajeCorreo"></label>
+                                </div>
+
+                             <!--correo-->
+                             <div class="grupo_input">
+                                <div class="div1">
+                                    <input type="email" id="email2" name="email2" autocomplete="off" class="input_item" placeholder=" " onkeyup="habilitar()" />
+
+                                    <label for="email2" class="label_item">
+                                        Confirmar correo electrónico
+                                        <span class="label_visto">&#9745</span>
+                                    </label>
+                                </div>
+
+                                <div id="pruebe" class="div2">
+
+                                </div>
+
+                            </div>
+                            <!--botón-->
                             <div class="bloque">
                                 <input type="submit" name="button" value="Iniciar Sesión" class="form__submit">
                             </div>
