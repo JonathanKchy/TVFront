@@ -37,21 +37,20 @@
              <section id="el-formulario">
                         <form action="@Url.Action("Registrar","Acceso")" class="formulario" method="post" id="form1" enctype="multipart/form-data" onsubmit="return validar();">
             
-                            <div class="prueba1">
-                                
-                            </div>
-                            
+                                                        
                             <div class="grupo_input">
                                 <div class="div1">
                                     <input oninput="validateInput()" type="text" minlength="10" id="identificacion"  maxlength="10"  name="identificacion" autocomplete="off" class="input_item"  placeholder=" " />
                                     
-                                    <label for="identificacion" class="label_item">Identificación (mínimo 10 dígitos) </label>
-
+                                    <label for="identificacion" class="label_item">Identificación (mínimo 10 dígitos)
+                                        <span class="label_visto">&#9745</span> </label>
                                 </div>
+
+                               
                                 <div id="pruebe" class="div2">
-                                    &#9745
+                                   
                                 </div>
-
+                                <!--servietsoft-->
                                 <div class="text-danger" style="text-align:left">
                                     <label hidden id="mensajeIdentificacion"> * Ingrese el número de identificación</label>
                                     <label hidden id="mensajeIdentificacionCaracteres"> * La identificación debe tener 10 caracteres</label>

@@ -157,13 +157,14 @@ header #menu ul {
     display: inline-block;
     margin: auto;
     width: 90%;
-            
+    overflow: hidden;
 }
 .div1{
     position: relative;
     margin: 10px;
     width: 65%;
     float: left;
+    
 }
 .div2{
     float: right;
@@ -173,7 +174,7 @@ header #menu ul {
     font-size: 30px;
 }
 
-.input_item{
+.div1 .input_item{
     position: relative;
     width: 120%;
     background: var(--color-trasparente);
@@ -185,7 +186,7 @@ header #menu ul {
     font-weight: bold;
 }
 
-.label_item{
+.div1 .label_item{
     color: var(--color-subtitulo);
     cursor: pointer;
     position: absolute;
@@ -196,12 +197,35 @@ header #menu ul {
     transition: transform .5s, color .3s;
 }  
 
-.input_item:focus + .label_item,
-        .input_item:not(:placeholder-shown)+.label_item
+.div1 .label_visto{
+    color: var(--color-subtitulo);
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    
+}
+
+.div1 input:focus + .label_item 
         {
             transform: translateY(-12px) scale(.7);
             transform-origin: left top;
         }
+.div1 .input_item:not(:placeholder-shown)+.label_item
+        {
+            transform: translateY(-12px) scale(.7);
+            transform-origin: left top;
+        }
+
+.div1 input:not(:placeholder-shown)+ .label_item .label_visto
+{
+    transform: translate(250px,-10px);
+    color: var(--color-menu);
+    display: block;
+    font-size: 40px;
+    float: right;
+}
+        
+   
 
 
 .form__submit {
