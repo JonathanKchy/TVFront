@@ -79,7 +79,7 @@
                                     <label hidden id="mensajeCorreo"></label>
                                 </div>
 
-                             <!--correo-->
+                             <!--correo2-->
                              <div class="grupo_input">
                                 <div class="div1">
                                     <input type="email" id="email2" name="email2" autocomplete="off" class="input_item" placeholder=" " onkeyup="habilitar()" />
@@ -95,10 +95,40 @@
                                 </div>
 
                             </div>
-                            <!--botón-->
-                            <div class="bloque">
-                                <input type="submit" name="button" value="Iniciar Sesión" class="form__submit">
+
+                            <div class="text-danger" style="text-align:left">
+                                <label hidden id="mensajeEmail">*Los correos electrónicos ingresados no coinciden </label>
                             </div>
+
+                            <!--recaptcha-->
+                            <div>
+                                <div class="g-recaptcha col-md-12" data-sitekey="6LcOVgYaAAAAAHmwILyhIYPztGrOndruM8ZUzs0z" style="width:0px"></div>
+                            </div>
+                            <div class="text-danger" style="text-align:center">
+                                <label hidden id="mensajeCaptcha">Por favor, seleccione la casilla</label>
+                            </div>
+
+                            <div class="col-md-12 pt-2 mt-1">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="checkTerminos" id="checkTerminos"> Acepto los términos y condiciones
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="text-danger" style="text-align:center">
+                                <label id="mensajeTérmino" hidden style="font-size:14px;" class="col-form-label col-md-12 col-sm-12 text-danger  label-align">Para continuar con el proceso, es necesario aceptar los Términos y Condiciones</label>
+                            </div>
+                            
+                            <div>
+                                <br />
+                                <!-- Cambio 2 Ocultar el boton !-->
+                               
+                                    <button type="submit" id="btn-one" class="form__submit">Iniciar Sesión</button>
+                                
+    
+                            </div>
+                           
             
                         </form>
                         <div class="col-md-4 offset-sm-1 pt-8 mb-7">

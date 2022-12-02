@@ -254,6 +254,13 @@ header {
     margin-left: 35%;
 }
 
+/*mensaje correo 2*/
+#mensajeEmail {
+	color: red;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-radius: 20px;
+}
+
 /*boton*/
 
 .form__submit {
