@@ -32,7 +32,7 @@
             <img src="/imagenes/logobce.png" alt="">
         </section>
         <h2>Bienvenido</h2>
-        <h3>¡Obtener tu firma electrónica nunca ha sido tan fácil!</h3></h2>
+        <h3>¡Obtener tu firma electrónica nunca ha sido tan fácil!</h3>
         <section class="secForm">
              <section id="el-formulario">
                         <form action="@Url.Action("Registrar","Acceso")" class="formario" method="post" id="form1" enctype="multipart/form-data" onsubmit="return validar();">
@@ -59,7 +59,7 @@
                              <!--correo-->
                             <div class="grupo_input">
                                 <div class="div1">
-                                    <input type="email" id="email" name="correo" autocomplete="off" class="input_item" placeholder=" " />
+                                    <input type="email" id="email" name="correo" autocomplete="off" class="input_item" placeholder=" " required="" />
 
                                     <label for="email" class="label_item">
                                         Ingrese su correo electrónico personal
@@ -102,12 +102,13 @@
 
                             <!--recaptcha-->
                             <div>
-                                <div class="g-recaptcha col-md-12" data-sitekey="6LcOVgYaAAAAAHmwILyhIYPztGrOndruM8ZUzs0z" style="width:0px"></div>
+                                <div class="g-recaptcha" data-sitekey="6LcOVgYaAAAAAHmwILyhIYPztGrOndruM8ZUzs0z" style="width:0px"></div>
                             </div>
+                            
                             <div class="text-danger" style="text-align:center">
                                 <label hidden id="mensajeCaptcha">Por favor, seleccione la casilla</label>
                             </div>
-
+                            <!--checkbox-->
                             <div class="col-md-12 pt-2 mt-1">
                                 <div class="checkbox">
                                     <label>
@@ -115,10 +116,11 @@
                                     </label>
                                 </div>
                             </div>
-
+    
                             <div class="text-danger" style="text-align:center">
                                 <label id="mensajeTérmino" hidden style="font-size:14px;" class="col-form-label col-md-12 col-sm-12 text-danger  label-align">Para continuar con el proceso, es necesario aceptar los Términos y Condiciones</label>
                             </div>
+
                             
                             <div>
                                 <br />
@@ -128,20 +130,24 @@
                                 
     
                             </div>
-                           
+                            
+                            <div >
+                                <p class="informacion_final">
+                                    <font COLOR="#0f6c79">&#9888</font>
+                                    <font COLOR="#707070">Personas extranjeras o jurídicas deben realizar el proceso de forma presencial</font>
+                                </p>
+                            </div>
             
                         </form>
-                        <div class="col-md-4 offset-sm-1 pt-8 mb-7">
-                            <a href="~/Content/video/politica.pdf" download="politicas" target="_blank" style="color: blue; font-size: 16px; margin: 10px 0 0 10px;">Políticas de Seguridad</a><br />
-                            <p>
-                                &#9888 Personas extranjeras o jurídicas deben realizar el proceso de forma presencial
-                            </p>
-                        </div>
+                       
                 </section>
            
         </section>
     </section>
     <!--Formulario-->
-    
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/Script/ScriptAuth.js"></script>    
 </body>
 </html>
