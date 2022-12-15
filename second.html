@@ -26,124 +26,133 @@
             
         </nav>
     </header>
-    <section class="foto">
-        <section class="miniFotos">
-            <img src="/imagenes/Recurso 2Sodignature logo.png" alt="">
-            <img src="/imagenes/logobce.png" alt="">
+    <section class="completo">
+        <section class="izquierda">
+            <p style="font-size: 3em;">Renueva tu firma <br>Electrónica</p>
+            <p class="visto_izquierda"><font COLOR="#28cacb">&#10004</font>  Tipo Archivo</p>
+            <p class="visto_izquierda"><font COLOR="#28cacb">&#10004</font>  Duración 2 años</p>
+            <p class="visto_izquierda"><font COLOR="#28cacb">&#10004</font> Confiable</p>
         </section>
-        <h2>Bienvenido</h2>
-        <h3>¡Obtener tu firma electrónica nunca ha sido tan fácil!</h3>
-        <section class="secForm">
-             <section id="el-formulario">
-                        <form action="@Url.Action("Registrar","Acceso")" class="formario" method="post" id="form1" enctype="multipart/form-data" onsubmit="return validar();">
-            
-                            <!--cédula-->                        
-                            <div class="grupo_input">
-                                <div class="div1">
-                                    <input oninput="validateInput()" type="text" minlength="10" id="identificacion"  maxlength="10"  name="identificacion" autocomplete="off" class="input_item"  placeholder=" " />
+        <section class="foto">
+            <section class="miniFotos">
+                <img src="/imagenes/Recurso 2Sodignature logo.png" alt="">
+                <img src="/imagenes/logobce.png" alt="">
+            </section>
+            <h2>Bienvenido</h2>
+            <h3>¡Obtener tu firma electrónica nunca ha sido tan fácil!</h3>
+            <section class="secForm">
+                 <section id="el-formulario">
+                            <form action="@Url.Action("Registrar","Acceso")" class="formario" method="post" id="form1" enctype="multipart/form-data" onsubmit="return validar();">
+                
+                                <!--cédula-->                        
+                                <div class="grupo_input">
+                                    <div class="div1">
+                                        <input oninput="validateInput()" type="text" minlength="10" id="identificacion"  maxlength="10"  name="identificacion" autocomplete="off" class="input_item"  placeholder=" " />
+                                        
+                                        <label for="identificacion" class="label_item">Identificación (mínimo 10 dígitos)
+                                            <span class="label_visto">&#9745</span> </label>
+                                    </div>
                                     
-                                    <label for="identificacion" class="label_item">Identificación (mínimo 10 dígitos)
-                                        <span class="label_visto">&#9745</span> </label>
+                                    <div id="pruebe" class="div2">
+                                       
+                                    </div>
+                                    <!--servietsoft-->
+                                    <div class="text-danger" style="text-align:left">
+                                        <label hidden id="mensajeIdentificacion"> * Ingrese el número de identificación</label>
+                                        <label hidden id="mensajeIdentificacionCaracteres"> * La identificación debe tener 10 caracteres</label>
+                                    </div>
+                                </div>
+    
+                                 <!--correo-->
+                                <div class="grupo_input">
+                                    <div class="div1">
+                                        <input type="email" id="email" name="correo" autocomplete="off" class="input_item" placeholder=" " required="" />
+    
+                                        <label for="email" class="label_item">
+                                            Ingrese su correo electrónico personal
+                                            <span class="label_visto">&#9745</span>
+                                        </label>
+                                    </div>
+    
+                                    <div id="pruebe" class="div2">
+    
+                                    </div>
+    
+                                </div>
+    
+                                    <span class="message success">Correo electrónico válido!</span>
+                                    <span class="message error">Correo electrónico inválido!</span>
+                                    <div class="text-danger" style="text-align:left">
+                                        <label hidden id="mensajeCorreo"></label>
+                                    </div>
+    
+                                 <!--correo2-->
+                                 <div class="grupo_input">
+                                    <div class="div1">
+                                        <input type="email" id="email2" name="email2" autocomplete="off" class="input_item" placeholder=" " onkeyup="habilitar()" />
+    
+                                        <label for="email2" class="label_item">
+                                            Confirmar correo electrónico
+                                            <span class="label_visto">&#9745</span>
+                                        </label>
+                                    </div>
+    
+                                    <div id="pruebe" class="div2">
+    
+                                    </div>
+    
+                                </div>
+    
+                                <div class="text-danger" style="text-align:left">
+                                    <label hidden id="mensajeEmail">*Los correos electrónicos ingresados no coinciden </label>
+                                </div>
+    
+                                <!--recaptcha-->
+                                <div>
+                                    <div class="g-recaptcha" data-sitekey="6LcOVgYaAAAAAHmwILyhIYPztGrOndruM8ZUzs0z" style="width:0px"></div>
                                 </div>
                                 
-                                <div id="pruebe" class="div2">
+                                <div class="text-danger" style="text-align:center">
+                                    <label hidden id="mensajeCaptcha">Por favor, seleccione la casilla</label>
+                                </div>
+                                <!--checkbox-->
+                                <div class="col-md-12 pt-2 mt-1">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="checkTerminos" id="checkTerminos"> Acepto los términos y condiciones
+                                        </label>
+                                    </div>
+                                </div>
+        
+                                <div class="text-danger" style="text-align:center">
+                                    <label id="mensajeTérmino" hidden style="font-size:14px;" class="col-form-label col-md-12 col-sm-12 text-danger  label-align">Para continuar con el proceso, es necesario aceptar los Términos y Condiciones</label>
+                                </div>
+    
+                                
+                                <div>
+                                    <br />
+                                    <!-- Cambio 2 Ocultar el boton !-->
                                    
+                                        <button type="submit" id="btn-one" class="form__submit">Iniciar Sesión</button>
+                                    
+        
                                 </div>
-                                <!--servietsoft-->
-                                <div class="text-danger" style="text-align:left">
-                                    <label hidden id="mensajeIdentificacion"> * Ingrese el número de identificación</label>
-                                    <label hidden id="mensajeIdentificacionCaracteres"> * La identificación debe tener 10 caracteres</label>
-                                </div>
-                            </div>
-
-                             <!--correo-->
-                            <div class="grupo_input">
-                                <div class="div1">
-                                    <input type="email" id="email" name="correo" autocomplete="off" class="input_item" placeholder=" " required="" />
-
-                                    <label for="email" class="label_item">
-                                        Ingrese su correo electrónico personal
-                                        <span class="label_visto">&#9745</span>
-                                    </label>
-                                </div>
-
-                                <div id="pruebe" class="div2">
-
-                                </div>
-
-                            </div>
-
-                                <span class="message success">Correo electrónico válido!</span>
-                                <span class="message error">Correo electrónico inválido!</span>
-                                <div class="text-danger" style="text-align:left">
-                                    <label hidden id="mensajeCorreo"></label>
-                                </div>
-
-                             <!--correo2-->
-                             <div class="grupo_input">
-                                <div class="div1">
-                                    <input type="email" id="email2" name="email2" autocomplete="off" class="input_item" placeholder=" " onkeyup="habilitar()" />
-
-                                    <label for="email2" class="label_item">
-                                        Confirmar correo electrónico
-                                        <span class="label_visto">&#9745</span>
-                                    </label>
-                                </div>
-
-                                <div id="pruebe" class="div2">
-
-                                </div>
-
-                            </div>
-
-                            <div class="text-danger" style="text-align:left">
-                                <label hidden id="mensajeEmail">*Los correos electrónicos ingresados no coinciden </label>
-                            </div>
-
-                            <!--recaptcha-->
-                            <div>
-                                <div class="g-recaptcha" data-sitekey="6LcOVgYaAAAAAHmwILyhIYPztGrOndruM8ZUzs0z" style="width:0px"></div>
-                            </div>
-                            
-                            <div class="text-danger" style="text-align:center">
-                                <label hidden id="mensajeCaptcha">Por favor, seleccione la casilla</label>
-                            </div>
-                            <!--checkbox-->
-                            <div class="col-md-12 pt-2 mt-1">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="checkTerminos" id="checkTerminos"> Acepto los términos y condiciones
-                                    </label>
-                                </div>
-                            </div>
-    
-                            <div class="text-danger" style="text-align:center">
-                                <label id="mensajeTérmino" hidden style="font-size:14px;" class="col-form-label col-md-12 col-sm-12 text-danger  label-align">Para continuar con el proceso, es necesario aceptar los Términos y Condiciones</label>
-                            </div>
-
-                            
-                            <div>
-                                <br />
-                                <!-- Cambio 2 Ocultar el boton !-->
-                               
-                                    <button type="submit" id="btn-one" class="form__submit">Iniciar Sesión</button>
                                 
-    
-                            </div>
-                            
-                            <div >
-                                <p class="informacion_final">
-                                    <font COLOR="#0f6c79">&#9888</font>
-                                    <font COLOR="#707070">Personas extranjeras o jurídicas deben realizar el proceso de forma presencial</font>
-                                </p>
-                            </div>
-            
-                        </form>
-                       
-                </section>
-           
+                                <div >
+                                    <p class="informacion_final">
+                                        <font COLOR="#0f6c79">&#9888</font>
+                                        <font COLOR="#707070">Personas extranjeras o jurídicas deben realizar el proceso de forma presencial</font>
+                                    </p>
+                                </div>
+                
+                            </form>
+                           
+                    </section>
+               
+            </section>
         </section>
     </section>
+   
     <!--Formulario-->
 
     <script src="https://www.google.com/recaptcha/api.js"></script>

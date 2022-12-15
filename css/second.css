@@ -289,8 +289,48 @@ header {
     transform-origin: 2 2;
     margin: 1em;
    }
-@media(min-width:856px) {
+.izquierda{
+    display: none;
+}
+
+@media(min-width:472px) {
+    body{
+        margin: none;
+        padding: none;
+        border: none;
+    }
+    header{
+        display: none;
+    }
     #menu ul a {
         display: none;
     }
+    .completo {
+        background-image: url("/imagenes/SodignatureFondo.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        display: flex;
+        font-weight: bold;
+    }
+    
+    .izquierda{
+        margin: 2em;
+        padding: 5em;
+        display: inline;
+        color: #fff;
+    }
+    .izquierda p{
+        padding: 0.4em 0em;
+        
+    }
+    .visto_izquierda{
+        font-size: 0.8em;
+        
+    }
+    .foto {
+        background-image: none;
+        margin-left: 10em;
+    }
+    
 }
